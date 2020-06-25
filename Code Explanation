@@ -1,0 +1,50 @@
+1- First, include all the required library files for this code.
+#include "esp_camera.h"
+#include <WiFi.h>
+
+2- Then enter the Wi-Fi credentials.
+const char* ssid = "Wi-Fi Name";
+const char* password = "Wi-Fi Password";
+
+3- After that, enter the IFTTT hostname and private key that you copied from the IFTTT website.
+const char *host = "maker.ifttt.com";
+const char *privateKey = "Your Private Key";
+
+4- Define all the pins that you are using in this project. I’m using the GPIO 2, 14 and 15 pins to connect the push button, LED and buzzer.
+const int buttonPin = 2;
+const int led1 = 14;
+const int buzzer = 15;
+
+5- Inside the void setup loop, define the button pin as input and LED and buzzer pins as output.
+void setup() {
+  pinMode(buttonPin, INPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+6- It will try to connect to Wi-Fi using the given credentials, and when connected to a network LED state will change from low to high.
+WiFi.begin(ssid, password);
+  int led = LOW; 
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+    digitalWrite(led1, led);
+    led = !led;
+  }
+  Serial.println("");
+  Serial.println("WiFi connected");
+  digitalWrite(led1, HIGH);
+
+7- While disconnected from a network ESP32 will restart until it connects to a network.
+while (WiFi.status() == WL_DISCONNECTED) {
+    ESP.restart();
+    digitalWrite(led1, LOW);
+    Serial.print("Connection Lost");
+
+8- ESP32 will read the button state, and if the button is in the LOW state (pulled high), i.e., a button has been pressed, it sends the event and turns on the buzzer for 3 seconds.
+int reading = digitalRead(buttonPin);
+if (buttonState == LOW) {
+        send_event("button_pressed");
+        Serial.print("button pressed");
+        digitalWrite(buzzer, HIGH);
+        delay(3000);
+          digitalWrite(buzzer, LOW);
