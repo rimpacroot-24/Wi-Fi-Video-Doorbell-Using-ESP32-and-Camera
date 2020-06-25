@@ -7,9 +7,9 @@ Security system is one of the most researched fields and with increasing securit
 we will make a Smart Wi-Fi Video Doorbell using ESP32-CAM. This Smart doorbell can easily be powered by an AC socket and whenever someone at the door presses the doorbell button, it will play a specific song on your phone and sends a text message with a link of video streaming page where you can see the person at the door from anywhere in world.
 
 # Components Required
--ESP32-CAM
--FTDI Programming Board
--220V AC to 5V DC Converter
--Buzzer
--Push Button
+- ESP32-CAM
+- FTDI Programming Board
+- 220V AC to 5V DC Converter
+- Buzzer
+- Push Button
 - 2 LEDs
