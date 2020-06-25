@@ -1,0 +1,23 @@
+Step-1: First login to IFTTT with your credentials or Sign Up if you don’t have an account on it.
+
+Step-2: Search for ‘Webhooks’ and click on the Webhooks in Services section.
+
+Step-3: Now, in the Webhooks window, click on ‘Documentation’ in the upper right corner to get the private key.
+
+Step-4: Copy this key. It will be used in the program.
+
+Step-5: After getting the private key, now we will create an applet using Webhooks and Email services. To create an applet click on your profile and then click on ‘Create.’
+
+Step-6: Now in the next window, click on the ‘This’ icon.
+
+Step-7: Now search for Webhooks in the search section and click on ‘Webhooks.’
+
+Step-8: Now choose ‘Receive a Web Request’ trigger and in the next window, enter the event name as button_pressed and then click on create a trigger. Now to complete the applet, click on ‘That’ to create a reaction for the button_pressed event.
+
+Step-9: Now in Android Device, choose ‘Play a specific song’ trigger.
+
+Step-10: Now enter the song title that you want to play when the doorbell button is pressed. In my case, I’m playing a song named ‘123’ from my Google play music. You can also use Spotify or other music apps.
+
+Step-11: After that, click on ‘Create action’ and then ‘Finish’ to complete the process. Now create another applet to send a message with the webpage link to the phone when the doorbell button is pressed. So to create this applet choose ‘Webhooks’ in ‘this’ section and in ‘that’ section choose ‘Android SMS.’
+
+Step-12: Now it will ask to enter the phone number and message body. For this Wi-Fi doorbell project, we are sending a message with the Webserver link so that you can see the live video streaming directly.
