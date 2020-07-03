@@ -1,5 +1,5 @@
 # Wi-Fi-Video-Doorbell-Using-ESP32-and-Camera
-we have learned about ESP32-CAM and how to use it for video streaming, now we will make a Smart Wi-Fi Video Doorbell using ESP32-CAM. This Smart doorbell can easily be powered by an AC socket and whenever someone at the door presses the doorbell button
+We have learned about ESP32-CAM and how to use it for video streaming, now we will make a Smart Wi-Fi Video Doorbell using ESP32-CAM. This Smart doorbell can easily be powered by an AC socket and whenever someone at the door presses the doorbell button
 
 # WHY ?
 Security system is one of the most researched fields and with increasing security threats, companies are launching new smart security products to combat these threats. IoT is an added advantage in this field which can automatically trigger an event, like calling the police, fire brigade or your neighbor, in case of any emergency.
